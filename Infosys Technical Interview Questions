@@ -25,3 +25,9 @@ Through abstraction, we can separate what an object does from how the object wor
 
 Encapsulation – encapsulation is based on the concept of having the data and code into a single unit to hide the internal workings of the code to an end-user. 
 For example, a class encapsulates several member variables and methods that may not be accessible outside the class.
+
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
