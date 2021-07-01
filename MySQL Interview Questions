@@ -92,3 +92,104 @@ SELECT something FROM tablename LEFT JOIN another table ON condition;
 4. Cross Join – Cross join has no join condition. It makes a cartesian of rows of both the tables. Here is the syntax:
 
 SELECT something FROM tablename CROSS JOIN another table;
+
+10. Can a primary key be dropped in MySQL? If yes, how?
+Yes, it is possible to drop the primary key from a table. The command to use is again, the ALTER TABLE followed by DROP. It goes like this:
+
+ALTER TABLE table_name DROP PRIMARY KEY;
+
+11. What are Procedures in MySQL?
+
+Procedures (or stored procedures) are subprograms, just like in a regular language, embedded in the database.
+A stored procedure consists of a name, SQL statement(s) and parameters. It utilises the caching in MySQL and hence saves time and memory, just like the prepared statements. 
+
+12. What is a trigger in MySQL?
+
+A trigger is a table-associated database object in MySQL. It is activated when a specified action takes place. 
+
+A trigger can be invoked after or before the event takes place. It can be used on INSERT, DELETE, and UPDATE. It uses the respective syntax to define the triggers.
+For example, BEFORE INSERT, AFTER DELETE, etc.
+
+13. How to add users in MySQL?
+
+To simply put, the user can be added by using the CREATE command and specifying the necessary credentials. First, log in to the MySQL account and then apply the syntax. 
+Something like this:
+
+CREATE USER ‘testuser’ IDENTIFIED BY ‘sample password’;
+
+Users can be granted permissions, by the following commands:
+
+GRANT SELECT ON * . * TO ‘testuser’;
+
+14. What is the core difference between Oracle and MySQL?
+The core difference is that MySQL works on a single-model database. That means it can only work with one base structure, while Oracle is a multi-model database.
+It means it can support various data models like graph, document, key-value, etc.
+Another fundamental difference is that Oracle’s support comes with a price tag for industrial solutions. While MySQL is open-source.
+
+15. What is CHAR and VARCHAR in MySQL?
+
+Both of them define a string. The core difference is that CHAR is a fixed-length while VARCHAR is variable length. 
+For example, if CHAR(5) is defined, then it needs exactly five characters. If VARCHAR(5) is defined, then it can take at most five characters. 
+VARCHAR can be said to have more efficiency in the usage of memory as it can have dynamic memory allocations. 
+
+16. Which drivers are necessary for MySQL?
+There are many types of drivers in MySQL. Mostly they are used for connections with different computational languages. Some of them are listed below:
+
+· PHP Driver
+· JDBC
+· OBDC
+· Python Driver
+· C – Wrapper
+· Perl and Ruby Drivers
+
+17. What is a LIKE statement? Explain % and _ in LIKE.
+
+While using filters in commands like SELECT, UPDATE, and DELETE, conditions might require a pattern to detect. LIKE is used to do just that. 
+LIKE has two wildcard characters, namely % (percentage) and _ (underscore). Percentage(%) matches a string of characters, while underscore matches a single character. 
+For example, %t will detect trees and tea both. However, _t will only detect one extra character, i.e., strings like ti or te. 
+
+18. How to convert timestamps to date in MySQL?
+It is a rather simple question that requires knowledge on two commands, like DATE_FORMAT and FROM_UNIXTIME. 
+
+DATE_FORMAT(FROM_UNIXTIME(`date_in_timestamp`), ‘%e %b %Y’) AS ‘date_formatted’
+
+19. Can a query be written in any case in MySQL?
+
+This MySQL interview question often confuses people who are just getting started with MySQL. Although most of the time, the queries are written in capital or 
+some in small letters, there is no such case sensitivity to MySQL queries. 
+For example, both create table tablename and CREATE TABLE tablename, works fine.
+However, if required, it is possible to make the query case sensitive by using the keyword BINARY. 
+
+20. How to save images in MySQL? 
+Images can be stored in the MySQL database by converting them to BLOBS. But it is not preferred due to the large overhead it creates. 
+Plus, it puts unnecessary load on the RAM while loading the entire database. It is hence preferred to store the paths in the database and store the images on disk. 
+
+21. How to get multiple condition results from data in MySQL?
+There are two ways to do so. The first is to use the keyword OR while using the WHERE condition. The other is to use a list of values to check and use IN with WHERE. 
+
+22. What are the different file formats used by MyISAM?
+Typically, a MyISAM table is stored using three files on disk. The data file and the index file, which are defined with extensions .MYD and .MYI, respectively. 
+There is a table definition file that has .frm extension. 
+
+23. How does DISTINCT work in MySQL?
+
+DISTINCT is used to avoid the problem of duplicity while fetching the results of a particular query.
+DISTINCT is used to make sure the results do not contain repeated values. DISTINCT can be used with the SELECT clause. Here is the syntax for it:
+
+SELECT DISTINCT something FROM tablename;
+
+24. Is there any upper limit for the number of columns in a table?
+Although the exact size limitation depends on many factors, MySQL has a hard limit on max size to be 4096 columns. 
+But as said, for a given table, the effective-maximum may be less.
+
+25. What are Access Control Lists or ACLs, in accordance with MySQL?
+The ACLs or Access control lists are used in a way to give a guideline for security in the MySQL database. 
+MySQL provides security based on ACLs for all the tasks performed by users like connection requests, queries, and any other operation. 
+
+26. How to make connections persistent in MySQL?
+While making a connection request, if Mysql_pconnect is used rather than mysql_connect, then it can make the connection persistent. 
+Here ‘p’ means persistent. The database connection is not closed every time.
+
+27. Explain the SAVEPOINT statement in MySQL.
+SAVEPOINT is a way of making sub-transactions in MySQL, which are also known as nested transactions. 
+SAVEPOINT marks a point in a regular transaction. It indicates a point to which the system can rollback. 
