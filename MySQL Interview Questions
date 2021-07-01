@@ -76,7 +76,7 @@ DELETE FROM cars WHERE carID = 3;
 Join is used to link one or more tables together, with the common column’s values in both tables. Primarily there are four types of joins:
 
 1. Inner Join – Inner join uses a join predicate, which is a condition used to make the join. Here is the syntax:
-<font color="green"> Some green text </font>
+
 SELECT something FROM tablename INNER JOIN another table ON condition;
 
 2. Left Join – Left join also requires a join condition. The left join chooses information beginning from the left table. 
