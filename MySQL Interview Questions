@@ -1,1 +1,94 @@
+1. What is MySQL?
+MySQL is one of the most popular open-source DBMS (database management system). MySQL is easy to use, reliable, and fast. 
+A DB management system that works on embedded systems as well as client-server systems. 
 
+2. Why is MySQL so popular? 
+First of all, MySQL is open-source. Second, it is widely adopted, so a lot of code is already available. 
+Even entire developed systems are there that can be referred to for the upcoming projects.
+MySQL has relational databases; hence it makes it have methodical storage rather than a big dump of unorganized mess. 
+And finally, as said earlier, MySQL is quick and robust. 
+
+3. What are the tables in MySQL? Explain the types.
+MySQL stores everything in logical tables. Tables can be thought of as the core storage structure of MySQL. 
+And hence tables are also known as storage engines. Here are the storage engines provided by MySQL:
+
+· MyISAM – MyISAM is the default storage engine for MySQL. It extends the former ISAM storage engine.
+  MyISAM offers big storage, up to 256TB! The tables can also be compressed to get extra storage. MyISAM tables are not transaction-safe. 
+
+· MERGE – A MERGE table is a virtual table that consolidates different MyISAM tables that have a comparable structure to one table. 
+  MERGE tables use the indexes of the base tables, as they do not have indexes of their own.
+
+· ARCHIVE – As the name suggests, Archive helps in archiving the tables by compressing them, in-turn reducing the storage space.
+  Hence, you can store a lot of records with the Archive. It uses the compression-decompression procedure while writing and reading the table records. 
+  It is done using the Zlib library.
+
+· CSV – This is more like a storage format. CSV engine stores the values in the Comma-separated values (CSV) format.
+  This engine makes it easier to migrate the tables into a non-SQL pipeline.
+
+· InnoDB – InnoDB is the most optimal while choosing an engine to drive performance. 
+  InnoDB is a transaction-safe engine. Hence it is ACID-compliant and can efficiently restore your database to the most stable state in case of a crash.
+
+· Memory– Memory tables were formerly known as HEAP. With memory tables, there can be a performance boost as the tables are stored in the memory. 
+  But it does not work with large data tables due to the same reason.
+
+· Federated – Federated tables allow accessing remote MySQL server tables. It can be done without any third-party integration or cluster technology.
+
+4. Write a query for a column addition in MySQL
+For this, an ALTER TABLE query is required. Once invoked, simply mention the column and its definition. Something like this:
+
+ALTER TABLE cars
+ADD COLUMN engine VARCHAR(80) AFTER colour;
+
+5. What is a foreign key? Write a query to implement the same in MySQL.
+A foreign key is used to connect two tables. A FOREIGN KEY is a field (or assortment of it) in one table that alludes to the PRIMARY KEY in another table. 
+To assign a foreign key, it is important to mention it while creating the table. It can be assigned by invoking the FOREIGN KEY query. Something like this:
+
+FOREIGN KEY (Any_ID) REFERENCES Table_to_reference(Any_ID)
+
+6. What is MySQL workbench?
+MySQL Workbench is a bound together visual instrument for database modelers, designers, and DBAs. 
+MySQL Workbench provides Data modelling, SQL, and server setup set of administrative tools. 
+To put it simply, MySQL workbench makes it possible to operate the database management system through GUI. 
+
+7. How does database import/export work in MySQL?
+
+It can be done in two ways. One is to use phpMyAdmin, and the second is to use the command line access of MySQL. 
+The latter can be done by using the command named mysqldump. It goes something like this:
+
+· mysqldump -u username -p databasename > dbsample.sql
+
+To import a database into MySQL, only a sign change is required, with a command of MySQL. The command goes something like this:
+
+· mysql -u username -p databasename < dbsample.sql
+
+#8. How can we delete a column or a row in MySQL?
+Now dropping a column can be simply done by using the ALTER TABLE command and then using the DROP command. It goes something like this:
+
+ALTER TABLE table_name DROP column name;
+
+To drop a row, first, an identification for the row is required. Once that is handy, use the DELETE command in conjunction with the conditional WHERE command. 
+Something like this:
+
+DELETE FROM cars WHERE carID = 3;
+
+9. What are the different ways to join tables in MySQL?
+
+Join is used to link one or more tables together, with the common column’s values in both tables. Primarily there are four types of joins:
+
+1. Inner Join – Inner join uses a join predicate, which is a condition used to make the join. Here is the syntax:
+
+SELECT something FROM tablename INNER JOIN another table ON condition;
+
+2. Left Join – Left join also requires a join condition. The left join chooses information beginning from the left table. 
+For each entry in the left table, the left compares each entry in the right table. Here is the syntax:
+
+SELECT something FROM tablename LEFT JOIN another table ON condition;
+
+3. Right Join – Opposite to left join and, with one difference in the query, that is the name of join. Here care should be taken about the order of tables. 
+Here is the syntax:
+
+SELECT something FROM tablename LEFT JOIN another table ON condition;
+
+4. Cross Join – Cross join has no join condition. It makes a cartesian of rows of both the tables. Here is the syntax:
+
+SELECT something FROM tablename CROSS JOIN another table;
