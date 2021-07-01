@@ -1,1 +1,65 @@
+1) What is cloud computing?
+Cloud computing is an internet based new age computer technology. It is the next stage technology that uses the clouds to provide the services whenever and 
+wherever the user need it.It provides a method to access several servers world wide.
+
+2) What are the benefits of cloud computing?
+The main benefits of cloud computing are:
+-Data backup and storage of data.
+-Powerful server capabilities.
+-Incremented productivity.
+-Very cost effective and time saving.
+-Software as Service known as SaaS.
+
+3) What is a cloud?
+A cloud is a combination of networks ,hardware, services, storage, and interfaces that helps in delivering computing as a service. It has three users :
+1.End users
+2.Business management users
+3.cloud service provider
+
+4) What are the different data types used in cloud computing?
+There are different data types in cloud computing like emails, contracts, images , blogs etc. 
+As we know that data is increasing day by day so it is needed to new data types to store these new data. For an example,
+if you want to store video then you need a new data type.
+
+5) Which are the different layers that define cloud architecture?
+-CLC or Cloud Controller
+-Walrus
+-Cluster Controller
+-SC or Storage Controller
+-NC or Node Controller
+
+6) Which platforms are used for large scale cloud computing?
+The following platforms are used for large scale cloud computing:
+-Apache Hadoop
+-MapReduce
+
+7) What are the different layers in cloud computing? Explain working of them.
+There are 3 layers in the hierarchy of cloud computing.
+
+-Infrastructure as a service (IaaS):It provides cloud infrastructure in terms of hardware as like memory, processor, speed etc.
+
+-Platform as a service (PaaS):It provides cloud application platform for the developer.
+
+-Software as a service (SaaS)::It provides the cloud applications to users directly without installing anything on the system. These applications remains on cloud.
+
+8) What are the different models for deployment in cloud computing?
+These are the different deployment model in cloud computing:
+Private cloud
+Public cloud
+Hybrid cloud
+Community cloud
+
+9) What is private cloud?
+Private clouds are used to keep the strategic operations and other reasons secure. It is a complete platform which is fully functional and can be owned,
+operated and restricted to only an organization or an industry. Now a day, most of the organizations have moved to private clouds due to security concerns.
+Virtual private cloud is being used that operate by a hosting company.
+
+10) What is public cloud?
+The public clouds are open to the people for use and deployment. For example: Google and Amazon etc. 
+The public clouds focus on a few layers like cloud application, infrastructure providing and providing platform markets.
+
+11) What are Hybrid clouds?
+Hybrid clouds are the combination of public clouds and private clouds. It is preferred over both the clouds because it applies most robust approach
+to implement cloud architecture. It includes the functionalities and features of both the worlds. It allows organizations to create their own cloud 
+and allow them to give the control over to someone else as well.
 
